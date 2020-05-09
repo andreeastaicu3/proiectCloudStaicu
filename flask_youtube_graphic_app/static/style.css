@@ -1,0 +1,38 @@
+.jumbotron {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-bottom: 0;
+    color:#fff;
+    background: rgb(13,42,65);
+    background: linear-gradient(153deg, rgba(13,42,65,1) 24%, rgba(26,71,107,1) 95%);
+    
+
+  }
+  @media (min-width: 768px) {
+    .jumbotron {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+  }
+  
+  .jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .jumbotron-heading {
+    font-weight: 400;
+    
+  }
+  
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+  
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  footer p {
+    margin-bottom: .25rem;
+  }

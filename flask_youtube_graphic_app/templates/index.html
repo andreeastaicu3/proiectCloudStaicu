@@ -26,7 +26,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="{{ url_for('static', filename='album.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
   </head>
   <body>
 
@@ -34,15 +34,15 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">Search YouTube</h1>
-      <p class="lead text-muted">Get the top nine results on YouTube for your query!</p>
+      <h1 class="jumbotron-heading">Graphic Design Searcher</h1>
+      <p class="lead text-muted">Get the top six results on YouTube about the graphic design!</p>
       <form method="POST">
       <div class="input-group mb-3">
         <input type="text" name="query" class="form-control">
       </div>
       <p>
-        <button type="submit" name="submit" value="search" class="btn btn-primary my-2">YouTube Search</button>
-        <button type="submit" name="submit" value="lucky" class="btn btn-secondary my-2">I'm Feeling Lucky</button>
+        <button type="submit" name="submit" value="search" class="btn btn-outline-primary my-2">Search on Youtube</button>
+        <button type="submit" name="submit" value="lucky" class="btn btn-outline-light my-2">The most popular video</button>
       </p>
       </form>
     </div>
