@@ -1,6 +1,6 @@
-Introducere
+## Introducere
 
-Descriere problemă 
+## Descriere problemă 
 
 Descriere API
 
