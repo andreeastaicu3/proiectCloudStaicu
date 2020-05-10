@@ -2,17 +2,17 @@
 
 ## Descriere problemă 
 
-Descriere API
+## Descriere API
 
-Flux de date
+## Flux de date
 
-Exemple de request / response
+## Exemple de request / response
 
-Metode HTTP
+## Metode HTTP
 
-Autentificare și autorizare servicii utilizate
+## Autentificare și autorizare servicii utilizate
 
-Capturi ecran aplicație 
+## Capturi ecran aplicație 
 
-Referinte
+## Referinte
 
