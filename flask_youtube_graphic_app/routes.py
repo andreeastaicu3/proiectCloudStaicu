@@ -59,3 +59,11 @@ def index():
             videos.append(video_data)
    
     return render_template('index.html',videos=videos)
+
+@main.route("/books")
+def home():
+    return render_template('books.html')
+
+@main.route("/about")
+def about():
+    return render_template('about.html')
