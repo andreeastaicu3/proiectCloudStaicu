@@ -29,5 +29,7 @@
         "env.bak{,/**}",
         "venv.bak{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/45ff6d7d-040a-44bb-99e9-77c443a184e7/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/CloudProiectStaicu2",
+    "appService.deploySubpath": ""
 }
