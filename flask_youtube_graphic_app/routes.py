@@ -5,7 +5,12 @@ from flask import Blueprint, render_template, current_app, request,redirect
 
 main=Blueprint('main',__name__)
 
-@main.route('/', methods=['GET','POST'])
+
+@main.route("/")
+def home():
+    return render_template('home.html')
+
+@main.route('/youtube', methods=['GET','POST'])
 def index():
     search_url='https://www.googleapis.com/youtube/v3/search'
     video_url='https://www.googleapis.com/youtube/v3/videos'
@@ -23,6 +28,7 @@ def index():
         }
 
         r=requests.get(search_url, params=search_params)
+        #print(r.text)
 
         results=r.json()['items']
 
@@ -45,6 +51,7 @@ def index():
         }
 
         r=requests.get(video_url,params=video_params)
+
         results=r.json()['items']
 
         
@@ -58,12 +65,62 @@ def index():
             }
             videos.append(video_data)
    
-    return render_template('index.html',videos=videos)
+    return render_template('youtube.html',videos=videos)
 
-@main.route("/books")
-def home():
-    return render_template('books.html')
+@main.route("/books", methods=['GET','POST'])
+def books():
 
-@main.route("/about")
-def about():
-    return render_template('about.html')
+    searchbooks_url='https://www.googleapis.com/books/v1/volumes'
+
+    books=[]
+
+    if request.method=='POST':
+
+        searchbooks_params={
+            'key':current_app.config['BOOK_API_KEY'],
+            'q':request.form.get('query2'),
+            #'q':'design',
+            'part':'volumeInfo',
+            'maxResults':6,
+        }
+
+        r=requests.get(searchbooks_url, params=searchbooks_params)
+
+        #print(r.text)
+
+        results=r.json()['items']
+
+        
+        #list of books ids    
+        books_ids=[]
+        for result in results:
+            books_ids.append(result['id'])
+
+        searchbook_params={
+            'key':current_app.config['BOOK_API_KEY'],
+            'id':','.join(books_ids),
+            'part':'volumeInfo,title',
+            'maxResults':3  
+        }
+
+        r=requests.get(searchbooks_url, params=searchbook_params)
+        
+        #results=r.json()['items']
+       
+
+        for result in results:
+            book_data={
+                'id':result['id'],
+                'url':f'https://books.google.ro/books?id={result["id"]}',
+                'thumbnail':result['volumeInfo']['imageLinks']['thumbnail'],
+                'title':result['volumeInfo']['title'],
+                #'author':result['volumeInfo']['authors']
+            }
+            books.append(book_data)
+
+            #print(r.text)
+        
+        if request.form.get('submit')=='lucky':
+            return redirect(f'https://books.google.ro/books?id={ books_ids[0] }')
+
+    return render_template('books.html', books=books)

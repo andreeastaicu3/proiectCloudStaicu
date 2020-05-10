@@ -30,7 +30,7 @@
   </head>
   <body>
 
-<main role="main">
+<main role="main"></main>
 
   <section class="jumbotron text-center">
     <div class="container">
@@ -38,7 +38,7 @@
       <p class="lead text-muted">Get the top six results of books about the graphic design!</p>
       <form method="POST">
       <div class="input-group mb-3">
-        <input type="text" name="query" class="form-control">
+        <input type="text" name="query2" class="form-control">
       </div>
       <p>
         <button type="submit" name="submit" value="search" class="btn btn-outline-primary my-2">Search after books</button>
@@ -48,6 +48,28 @@
     </div>
   </section>
 
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        {% for book in books %}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{ book.thumbnail }}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"></img>
+            <div class="card-body">
+              <p class="card-text">{{ book.title }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a type="button" href="{{ book.url }}" class="btn btn-sm btn-outline-secondary">View</a>
+                </div>
+                <small class="text-muted">{{ book.author }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 
 </main>
 </body>
