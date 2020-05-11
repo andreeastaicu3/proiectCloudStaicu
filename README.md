@@ -13,15 +13,18 @@ Aplicatia dezvoltata de mine are ca scop accesul rapid la informatii din sfera d
 
 Cele doua API-uri folosite in aplicatia web sunt:
  - Youtube Data API
+ 
+ Acest API permite folosirea diverselor functii ale Youtube-ului 
+ 
  - Google Books API
 
 ## Flux de date
 
-## Exemple de request / response
+    1. Exemple de request / response
 
-## Metode HTTP
+    2. Metode HTTP
 
-## Autentificare și autorizare servicii utilizate
+    3. Autentificare și autorizare servicii utilizate
 
 ## Capturi ecran aplicație 
 
