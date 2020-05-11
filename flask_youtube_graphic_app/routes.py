@@ -11,7 +11,7 @@ def home():
     return render_template('home.html')
 
 @main.route('/youtube', methods=['GET','POST'])
-def index():
+def youtube():
     search_url='https://www.googleapis.com/youtube/v3/search'
     video_url='https://www.googleapis.com/youtube/v3/videos'
     
@@ -100,13 +100,11 @@ def books():
             'key':current_app.config['BOOK_API_KEY'],
             'id':','.join(books_ids),
             'part':'volumeInfo,title',
-            'maxResults':3  
+            'maxResults':6  
         }
 
         r=requests.get(searchbooks_url, params=searchbook_params)
-        
-        #results=r.json()['items']
-       
+
 
         for result in results:
             book_data={

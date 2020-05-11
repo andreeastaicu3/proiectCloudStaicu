@@ -38,8 +38,11 @@
       <p class="lead text-muted">Find out everything about graphic design in Youtube videos or in books!</p>
       <form method="POST">
       <p>
-        <button type="submit" name="submit" value="search" class="btn btn-outline-primary my-2">Search on Youtube</button>
-        <button type="submit" name="submit" value="lucky" class="btn btn-outline-light my-2">Search on books</button>
+        
+        <a href="{{ url_for('main.youtube') }}" class="btn btn-outline-primary my-2">Search using Youtube API</a>
+       
+        <a href="{{ url_for('main.books') }}" class="btn btn-outline-primary my-2">Search using Book API</a>
+
       </p>
       </form>
     
