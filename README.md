@@ -1,4 +1,4 @@
-<h1> Aplicatie de acces rapid la materiale necesare invatarii design-ului grafic
+# Aplicatie de acces rapid la materiale necesare invatarii design-ului grafic
     <br><br>
 
 ## Introducere
