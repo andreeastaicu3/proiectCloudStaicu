@@ -1,5 +1,5 @@
 # Aplicatie de acces rapid la materiale necesare invatarii design-ului grafic
-    <br><br>
+
 
 ## Introducere
 
@@ -38,22 +38,37 @@ Din cadrul API-ului am folosit resursele:
 ## Capturi ecran aplicație 
 
 Aplicatia se deschide cu pagina principala din care se poate naviga in alte 2 pagini: pagina in care se foloseste API-ul Youtube si in cea in care se afiseaza date preluate folosind API-ul Google Books.
+
 ![](imagini/main.png)
 
 Daca alegem sa apasam pe butonul **Search using Youtube API** vom ajunge in urmatoarea pagina:
+<br>
+
 ![](imagini/yt1.png)
+
 Dupa ce introducem un text in caseta:
+
 ![](imagini/yt2.png)
+
 Avem 2 posibilitati de a acesa datele preluate folosind API-ul Youtube. Butonul **Search on Youtube** ne da ca rezultat primele 6 video-uri de pe Youtube conform textului introdus in caseta. Cel de al doilea buton **The most popular video** ne redirectioneaza direct catre pagina de Youtube, catre cel mai popular video conform celor cautate in bara de search a aplicatiei.
+
 ![](imagini/yt3.png)
+
 Exemplu - primele 6 video-uri de pe Youtube in urma introducerii termenului illustrator:
+
 ![](imagini/yt4.png)
+
 Butonul de **Go to main** ne duce in pagina principala a aplicatiei.
 De aici putem accesa si butonul **Search using Book API** care ne face redirectionare catre pagina urmatoare:
+
 ![](imagini/bk1.png)
+
 Aici avem functionalitati asemanatoare cu cele din pagina ce utilizeaza API-ul Youtube. Butonul **Search after books** face un POST la API-ul Google Books si da ca rezultat primele 6 carti conform datelor introduse in bara de search:
+
 ![](imagini/bk2.png)
+
 Cel de al doilea buton **The most popular book** ne redirectioneaza direct catre pagina de Google Books, catre cea mai populara carte conform celor cautate in bara de search a aplicatiei.
+
 ![](imagini/bk3.png)
 
 ## Referinte
