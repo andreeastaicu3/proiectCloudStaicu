@@ -38,4 +38,11 @@ Din cadrul API-ului am folosit resursele:
 ## Capturi ecran aplicație 
 
 ## Referinte
-
+ - http://hub.webtech-superheroes.net/
+ - https://console.developers.google.com/
+ - https://developers.google.com/youtube/v3
+ - https://developers.google.com/books
+ - tutoriale pe https://www.youtube.com/
+ - https://dashboard.heroku.com/apps
+ - https://flask.palletsprojects.com/
+ - https://dashboard.heroku.com/
