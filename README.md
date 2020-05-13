@@ -32,89 +32,16 @@ Din cadrul API-ului am folosit resursele:
 ## Flux de date
 
 1. Exemple de request / response
-    Request pentru Youtube API
-    '''
-    if request.method=='POST':
-
-        search_params={
-            'key':current_app.config['YOUTUBE_API_KEY'],
-            'q':request.form.get('design'),
-            'part':'snippet',
-            'maxResults':1,
-            'type':'video'
-        }
+    Request pentru Youtube API:
+  
        
-     Response:
-     '''
-     {
-      "kind": "youtube#video",
-      "etag": "nIWHAmaK9f66oBxn_lT2DQGmCMQ",
-      "id": "T6AgnbMx3ME",
-      "snippet": {
-        "publishedAt": "2020-05-05T22:04:41Z",
-        "channelId": "UCupvZG-5ko_eiXAupbDfxWw",
-        "title": "Three doctors mysteriously fall out of Russian hospital windows",
-        "description": "Three frontline health care workers have mysteriously fallen out of hospital windows in Russia over the past
-two weeks, heightening public attention to the working conditions for doctors and medical professionals amid the coronavirus pandemic. #CNN #News",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/T6AgnbMx3ME/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/T6AgnbMx3ME/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/T6AgnbMx3ME/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/T6AgnbMx3ME/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/T6AgnbMx3ME/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "CNN",
-        "tags": [
-          "latest News",
-          "Happening Now",
-          "CNN",
-          "world news",
-          "russia",
-          "coronavirus",
-          "Covid-19",
-          "matthew chance",
-          "the lead",
-          "CNNi"
-        ],
-        "categoryId": "25",
-        "liveBroadcastContent": "none",
-        "defaultLanguage": "en",
-        "localized": {
-          "title": "Three doctors mysteriously fall out of Russian hospital windows",
-          "description": "Three frontline health care workers have mysteriously fallen out of hospital windows in Russia over the past two weeks, heightening public attention to the working conditions for doctors and medical professionals amid the coronavirus pandemic. #CNN #News"
-        },
-        "defaultAudioLanguage": "en"
-      },
-      "contentDetails": {
-        "duration": "PT3M25S",
-        "dimension": "2d",
-        "definition": "hd",
-        "caption": "false",
-        "licensedContent": true,
-        "contentRating": {},
-        "projection": "rectangular"
-      }
-    },
+    Response pentru Youtube API:
+    
+    
+    Request pentru Google Book API:
+  
+       
+    Response pentru Google Book API:
     
 2. Metode HTTP
     Metodele folosite in cadul aplicatiei sunt **GET** si **POST**.
@@ -123,7 +50,7 @@ two weeks, heightening public attention to the working conditions for doctors an
     Folosire metoda GET: r=requests.get(search_url, params=search_params)
     Parsare rezultat: de results=r.json()['items']
 
-    3. Autentificare și autorizare servicii utilizate
+3. Autentificare și autorizare servicii utilizate
     Utilizarea API-urilor Youtube si Google Books a fost posibila prin obtinerea unui API KEY de la Google pentru a putea avea acces la cele doua servicii. 
     Mai apoi, pentru a face deploy aplicatiei, am folosit 2 Cloud-uri: Heroku si Azure, in cadrul carora mi-am facut cont. Deploy-ul pe Azure s-a realizat prin mediul in care am scris code, Visual Studio Code, iar pentru Heroku, deploy-ul s-a relizat din GitHub. Pentru a putea avea acces la API pe aceste doua Cloud-uri a fost nevoie sa declar KEY-ul in sectiunea de configurare a variabilelor pentru cele doua medii.
 
