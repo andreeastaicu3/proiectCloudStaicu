@@ -31,12 +31,20 @@ Din cadrul API-ului am folosit resursele:
    - **Video** - list: prin care se returneaza o lista de video-uri in urma request-ului cu parametri care API
       
  ## - Google Books API
+ 
+API-ul de la Google Books frunizeaza acces rapid la cartile si informatiile din acestea ce sunt stocate in repository-ul Google Books. Facilitand accesul la acest API prin obtinerea unui KEY, google ofera un preview al cartilor in aplicatia web dezvoltata. 
+
+Acest API are un comportament asemenator cu cel anterior prezentat, astfel incat in cadrul aplicatiei, printr-un request la server, sunt aduse ca response o lista de carti (volume) sub forma unui JSON.
 
 ## Flux de date
 
 1. Exemple de request / response
 
     Request pentru Youtube API:
+    
+    HTTP Request: *GET https://www.googleapis.com/youtube/v3/search
+    
+    HTTP Request: *GET https://www.googleapis.com/youtube/v3/videos
     
     ![](imagini/request_yt.png)
        
@@ -45,6 +53,8 @@ Din cadrul API-ului am folosit resursele:
     ![](imagini/response_yt.png)
     
     Request pentru Google Book API:
+    
+    HTTP Request: *GET https://www.googleapis.com/books/v1/volumes?q={search terms}
 
     ![](imagini/request_bk.png)
        
@@ -61,9 +71,9 @@ Din cadrul API-ului am folosit resursele:
     
     Apoi, folosind metoda **GET**, am citit datele preluate de la sursa specifiata din API (Youtube/Google Books). Aceste date sunt sub forma unui JSON care a fost parsat, iar datele au fost apoi afisate in interfata aplicatiei web.
     
-    Folosire metoda GET: r=requests.get(search_url, params=search_params)
+    Folosire metoda GET: *r=requests.get(search_url, params=search_params)
     
-    Parsare rezultat: de results=r.json()['items']
+    Parsare rezultat: *de results=r.json()['items']
 
 3. Autentificare și autorizare servicii utilizate
 
