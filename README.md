@@ -26,9 +26,9 @@ Pentru a putea accesa API-ul de la Youtube, din site-ul API Console selectez opt
 
 Din cadrul API-ului am folosit resursele:
 
-     - **Search**: care contine informatiile despre vide-urile, canalele si playlist-urile de pe Youtube care sunt conform parametrului  specificat intr-un request API. Cat timp cautarea unui rezultat este o resursa unica, precum un video, nu este nevoie de date persistente. Datele sunt preluate sub forma unui JSON, pe care l-am parsat in aplicatie si am extras doar id-ul, titlul (snippet.title), thumbnail-ul (snippet.thumbnails), durata video-ului si link-ul de acces la acesta.
+   - **Search**: care contine informatiile despre vide-urile, canalele si playlist-urile de pe Youtube care sunt conform parametrului  specificat intr-un request API. Cat timp cautarea unui rezultat este o resursa unica, precum un video, nu este nevoie de date persistente. Datele sunt preluate sub forma unui JSON, pe care l-am parsat in aplicatie si am extras doar id-ul, titlul (snippet.title), thumbnail-ul (snippet.thumbnails), durata video-ului si link-ul de acces la acesta.
       
-     - **Video** - list: prin care se returneaza o lista de video-uri in urma request-ului cu parametri care API
+   - **Video** - list: prin care se returneaza o lista de video-uri in urma request-ului cu parametri care API
       
  - Google Books API
 
