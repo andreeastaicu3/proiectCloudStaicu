@@ -32,6 +32,7 @@ Din cadrul API-ului am folosit resursele:
 ## Flux de date
 
 1. Exemple de request / response
+<br>
     Request pentru Youtube API:
   
        
