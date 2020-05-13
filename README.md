@@ -18,7 +18,7 @@ Aplicatia dezvoltata de mine are ca scop accesul rapid la informatii din sfera d
 
 Cele doua API-uri folosite in aplicatia web sunt:
 
-- Youtube Data API
+## - Youtube Data API
  
 Acest API permite folosirea diverselor functii ale Youtube-ului. Acest API poate sa fie folosit pentru a incarca video-uri, pentru a cauta video-uri, pentru a utiliza playlist-uri sau pentru a realiza update-uri pentru setarile canalului. Acest API poate sa fie folosit pentru a cauta video-uri dupa un termen, topic, locatie sau alte date. De asemenea, acest API se foloseste de metoda search.list ceea ce face posibilia cautarea de video-uri, playlist-uri si canale.
  
@@ -30,7 +30,7 @@ Din cadrul API-ului am folosit resursele:
       
    - **Video** - list: prin care se returneaza o lista de video-uri in urma request-ului cu parametri care API
       
- - Google Books API
+ ## - Google Books API
 
 ## Flux de date
 
