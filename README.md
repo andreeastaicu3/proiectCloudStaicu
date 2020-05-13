@@ -32,17 +32,23 @@ Din cadrul API-ului am folosit resursele:
 ## Flux de date
 
 1. Exemple de request / response
-<br>
+
     Request pentru Youtube API:
-  
+    
+    ![](imagini/request_yt.png)
        
     Response pentru Youtube API:
     
+    ![](imagini/response_yt.png)
     
     Request pentru Google Book API:
-  
+
+    ![](imagini/request_bk.png)
        
     Response pentru Google Book API:
+    
+    ![](imagini/response_bk.png)
+    
     
 2. Metode HTTP
     Metodele folosite in cadul aplicatiei sunt **GET** si **POST**.
