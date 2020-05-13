@@ -38,12 +38,83 @@ Din cadrul API-ului am folosit resursele:
 
         search_params={
             'key':current_app.config['YOUTUBE_API_KEY'],
-            'q':request.form.get('query'),
+            'q':request.form.get('design'),
             'part':'snippet',
-            'maxResults':6,
+            'maxResults':1,
             'type':'video'
         }
-        '''
+       
+     Response:
+     '''
+     {
+      "kind": "youtube#video",
+      "etag": "nIWHAmaK9f66oBxn_lT2DQGmCMQ",
+      "id": "T6AgnbMx3ME",
+      "snippet": {
+        "publishedAt": "2020-05-05T22:04:41Z",
+        "channelId": "UCupvZG-5ko_eiXAupbDfxWw",
+        "title": "Three doctors mysteriously fall out of Russian hospital windows",
+        "description": "Three frontline health care workers have mysteriously fallen out of hospital windows in Russia over the past
+two weeks, heightening public attention to the working conditions for doctors and medical professionals amid the coronavirus pandemic. #CNN #News",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/T6AgnbMx3ME/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/T6AgnbMx3ME/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/T6AgnbMx3ME/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/T6AgnbMx3ME/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/T6AgnbMx3ME/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNN",
+        "tags": [
+          "latest News",
+          "Happening Now",
+          "CNN",
+          "world news",
+          "russia",
+          "coronavirus",
+          "Covid-19",
+          "matthew chance",
+          "the lead",
+          "CNNi"
+        ],
+        "categoryId": "25",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Three doctors mysteriously fall out of Russian hospital windows",
+          "description": "Three frontline health care workers have mysteriously fallen out of hospital windows in Russia over the past two weeks, heightening public attention to the working conditions for doctors and medical professionals amid the coronavirus pandemic. #CNN #News"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT3M25S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      }
+    },
     
 2. Metode HTTP
     Metodele folosite in cadul aplicatiei sunt **GET** si **POST**.
