@@ -17,15 +17,18 @@ Aplicatia dezvoltata de mine are ca scop accesul rapid la informatii din sfera d
 ## Descriere API
 
 Cele doua API-uri folosite in aplicatia web sunt:
- - Youtube Data API
+
+- Youtube Data API
  
 Acest API permite folosirea diverselor functii ale Youtube-ului. Acest API poate sa fie folosit pentru a incarca video-uri, pentru a cauta video-uri, pentru a utiliza playlist-uri sau pentru a realiza update-uri pentru setarile canalului. Acest API poate sa fie folosit pentru a cauta video-uri dupa un termen, topic, locatie sau alte date. De asemenea, acest API se foloseste de metoda search.list ceea ce face posibilia cautarea de video-uri, playlist-uri si canale.
  
 Pentru a putea accesa API-ul de la Youtube, din site-ul API Console selectez optiunea Enable pentru a genera un API_KEY pe care apoi mi-l definesc in aplicatie.
 
 Din cadrul API-ului am folosit resursele:
-      - **Search**: care contine informatiile despre vide-urile, canalele si playlist-urile de pe Youtube care sunt conform parametrului specificat intr-un request API. Cat timp cautarea unui rezultat este o resursa unica, precum un video, nu este nevoie de date persistente. Datele sunt preluate sub forma unui JSON, pe care l-am parsat in aplicatie si am extras doar id-ul, titlul (snippet.title), thumbnail-ul (snippet.thumbnails), durata video-ului si link-ul de acces la acesta.
-      - **Video** - list: prin care se returneaza o lista de video-uri in urma request-ului cu parametri care API
+
+     - **Search**: care contine informatiile despre vide-urile, canalele si playlist-urile de pe Youtube care sunt conform parametrului  specificat intr-un request API. Cat timp cautarea unui rezultat este o resursa unica, precum un video, nu este nevoie de date persistente. Datele sunt preluate sub forma unui JSON, pe care l-am parsat in aplicatie si am extras doar id-ul, titlul (snippet.title), thumbnail-ul (snippet.thumbnails), durata video-ului si link-ul de acces la acesta.
+      
+     - **Video** - list: prin care se returneaza o lista de video-uri in urma request-ului cu parametri care API
       
  - Google Books API
 
@@ -51,14 +54,21 @@ Din cadrul API-ului am folosit resursele:
     
     
 2. Metode HTTP
+
     Metodele folosite in cadul aplicatiei sunt **GET** si **POST**.
+    
     Metoda **POST** este folosita pentru a trimite date catre server. In cazul aplicatiei dezvoltate, prin POST se trimit date catre key-ul specificat pentru accesarea API-ului (YOUTUBE_API_KEY/BOOK_API_KEY) precum si un termen marcat prin "q" (query) in aplicatie, dar si numarul maxim de rezultate pe care le asteptam. 
+    
     Apoi, folosind metoda **GET**, am citit datele preluate de la sursa specifiata din API (Youtube/Google Books). Aceste date sunt sub forma unui JSON care a fost parsat, iar datele au fost apoi afisate in interfata aplicatiei web.
+    
     Folosire metoda GET: r=requests.get(search_url, params=search_params)
+    
     Parsare rezultat: de results=r.json()['items']
 
 3. Autentificare și autorizare servicii utilizate
+
     Utilizarea API-urilor Youtube si Google Books a fost posibila prin obtinerea unui API KEY de la Google pentru a putea avea acces la cele doua servicii. 
+    
     Mai apoi, pentru a face deploy aplicatiei, am folosit 2 Cloud-uri: Heroku si Azure, in cadrul carora mi-am facut cont. Deploy-ul pe Azure s-a realizat prin mediul in care am scris code, Visual Studio Code, iar pentru Heroku, deploy-ul s-a relizat din GitHub. Pentru a putea avea acces la API pe aceste doua Cloud-uri a fost nevoie sa declar KEY-ul in sectiunea de configurare a variabilelor pentru cele doua medii.
 
 ## Capturi ecran aplicație 
